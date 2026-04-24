@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thorz Digital | Membangun Solusi Digital yang Skalabel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#f8f9ff",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#d3e4fe",
+                      "secondary-fixed-dim": "#7bd1fa",
+                      "surface-dim": "#cbdbf5",
+                      "on-secondary-fixed-variant": "#004d66",
+                      "secondary-fixed": "#c0e8ff",
+                      "tertiary": "#40494e",
+                      "secondary-container": "#7ed4fd",
+                      "inverse-primary": "#c3c0ff",
+                      "on-primary-container": "#dad7ff",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#213145",
+                      "outline-variant": "#c7c4d8",
+                      "tertiary-container": "#586166",
+                      "outline": "#777587",
+                      "on-secondary": "#ffffff",
+                      "primary-container": "#4f46e5",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#3f484d",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#d3dce2",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-secondary-fixed": "#001e2b",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "on-primary-fixed": "#0f0069",
+                      "secondary": "#006686",
+                      "surface-tint": "#4d44e3",
+                      "surface-container-low": "#eff4ff",
+                      "background": "#f8f9ff",
+                      "on-background": "#0b1c30",
+                      "on-surface": "#0b1c30",
+                      "tertiary-fixed": "#dbe4ea",
+                      "surface-bright": "#f8f9ff",
+                      "on-surface-variant": "#464555",
+                      "primary": "#3525cd",
+                      "primary-fixed": "#e2dfff",
+                      "surface-container-high": "#dce9ff",
+                      "on-background": "#0b1c30",
+                      "on-secondary-container": "#005b78",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-tertiary-fixed": "#141d21",
+                      "tertiary-fixed-dim": "#bfc8ce",
+                      "primary-fixed-dim": "#c3c0ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "xs": "4px",
+                      "container-max": "1280px",
+                      "xxl": "48px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "section": "80px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "h1": ["Inter"],
+                      "h2": ["Inter"],
+                      "h3": ["Inter"],
+                      "body-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "h2": ["30px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-bold text-slate-900 dark:text-white tracking-tighter">Thorz Digital</div>
+<nav class="hidden md:flex items-center space-x-8 font-['Inter'] text-sm font-medium tracking-tight">
+<a class="text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 pb-1" href="#layanan">Layanan</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="#portfolio">Portfolio</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="#proses">Proses</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="#harga">Harga</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 bg-primary-container text-white rounded-xl font-medium hover:bg-primary transition-all active:scale-95 duration-200 text-body-sm">
+                    Konsultasi Gratis
+                </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-white pt-24 pb-32">
+<div class="absolute inset-0 bg-[radial-gradient(45%_45%_at_50%_50%,#e2dfff_0%,#f8f9ff_100%)] opacity-30"></div>
+<div class="max-w-[1280px] mx-auto px-6 relative text-center lg:text-left flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-primary font-medium text-label-caps">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                    SOFTWARE HOUSE TERPERCAYA DI INDONESIA
+                </div>
+<h1 class="font-display text-display text-on-surface">
+                    Membangun Solusi Digital yang <span class="text-primary">Skalabel</span> untuk Bisnis Anda
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto lg:mx-0">
+                    Kami membantu UMKM, Startup, dan Pemilik Bisnis melalui Web Development, SaaS, dan Automasi Bisnis yang tepat guna.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+<button class="px-8 py-4 bg-primary text-white rounded-xl font-semibold shadow-lg shadow-primary/20 hover:shadow-xl transition-all active:scale-95">
+                        Konsultasi Gratis
+                    </button>
+<button class="px-8 py-4 bg-white border border-outline-variant text-on-surface rounded-xl font-semibold hover:bg-surface-container-low transition-all active:scale-95">
+                        Lihat Portfolio
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full max-w-xl">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary-container rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<img alt="Dashboard UI Display" class="relative rounded-2xl shadow-2xl border border-white/20" data-alt="Modern minimalist software dashboard interface with clean data visualizations and purple accents on a high-end laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhnCm797yqd8K-yoCaMawFRVlpjURjKbVDbrVK89aPWyaDVDlbVUeEZc8pYgr8ppqbkhUnvamIsrzny9JcJA1U1EWkH34WqC_ovuN0A9erTTzBJPsYLstMpmDJFeDB_XBUlIPGlpXdzbH0fN-ysKWp7252R7_Rl_yjq4EafEAHaVPAwit8srT-Sb2iSi29GR5fXb7fSR4aYjhvoMXzddCQEe-80dWHCYgm7NeXJu3Fcc5VsAYoxjUKgvZr3RP5BfR-5GwCcOgnBKdH"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section bg-surface-container-low" id="layanan">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-h1 text-h1 text-on-surface">Layanan Kami</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+                    Solusi teknologi komprehensif yang dirancang untuk mempercepat pertumbuhan bisnis Anda.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">language</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Web Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Custom websites that convert. Kami membangun website yang cepat, responsif, dan dioptimalkan untuk SEO.
+                    </p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed flex items-center justify-center rounded-xl text-secondary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">cloud_queue</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">SaaS Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Building scalable software products. Platform berbasis cloud yang kuat dan siap menangani jutaan pengguna.
+                    </p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-surface-variant flex items-center justify-center rounded-xl text-on-surface mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">settings_suggest</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Business Automation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Streamlining workflows with tech. Otomatisasi proses manual untuk menghemat waktu dan biaya operasional.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-section bg-white" id="portfolio">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<h2 class="font-h1 text-h1 text-on-surface">Portfolio Terkini</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Intip beberapa hasil karya terbaik kami yang telah membantu klien mencapai target bisnis mereka.
+                    </p>
+</div>
+<button class="font-body-sm text-body-sm text-primary font-bold hover:underline flex items-center gap-2">
+                    Lihat Semua Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6 aspect-video bg-surface-container-high border border-outline-variant">
+<img alt="E-commerce Fashion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek e-commerce website for a premium clothing brand on a mobile and desktop screen mock-up with minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCghtULMUZJ3LDoesefinvz34XEqFm2VmjlP6Urya9mg9UUnbnMuWfAgbNbpnu5OhAZkcXx8q37o1miC7Zw4fk51MtWkJ2XHxYkiCYc3ywReKq7cvnKNE68KLwtzMa-cStg3q7WhVv-sJUpgzQFFoXs0HkIi1EEag9HUpkbeqvxi_kSnERZSDLBJuG_6RQYluV3O_KpBoTSzvCHfJjJqPWjL4ATA9dZDaK_WtjSFM3wZu5Hrj0vbu-6cOS54YfH0KRZ4MI6SJicJdar"/>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded text-label-caps">Web Dev</span>
+</div>
+<h4 class="font-h3 text-h3 mb-2 group-hover:text-primary transition-colors">E-commerce platform for Fashion Brand</h4>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6 aspect-video bg-surface-container-high border border-outline-variant">
+<img alt="Logistics SaaS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Clean and professional logistics dashboard UI with charts, maps, and shipment tracking information on a studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2e797AY6yZLIiMBiof5nOYeLHZ5C5idoFdqXBTmZFc7Q7hOzbPG_u8o6MUHa7RX-LB1sH4oEXNSymZ1vHU6nenP9DIN6M2l9NPQAx-6zuuG0T4lLXqV_ek7kUBdVTi6dxF3zTEZGDIT-7OhJXdP9lbbPeM3vbkZ0fdyNVPmcRhlcTbSWZjSnvPdxoxEng5SeNEdiI6g1B0_f9-7gF00VaDpQ4lg53tOW8xwzd45WvJOj3n8Z4Hty6MfxAgu5QMoXQBLHd_OkEIEDh"/>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded text-label-caps">SaaS</span>
+</div>
+<h4 class="font-h3 text-h3 mb-2 group-hover:text-primary transition-colors">SaaS Dashboard for Logistics</h4>
+</div>
+<!-- Project 3 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-xl mb-6 aspect-video bg-surface-container-high border border-outline-variant">
+<img alt="Real Estate CRM" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sophisticated CRM interface for real estate management showing property listings and lead tracking in a modern layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR_ss1pcQakhuP3MeOkguIDmZLvM6dc8P21BeOPvVzD61jhQnoPi5LvL04ZBO8gF3vR_UZ00BfNUTH5LxQQ-8I6FVoLHlUkCDQx76cTPnFPnlViRVd2XAIS91PZo9cfGG3Jd461eEF8JhYS8XIfM96Vw8TO-00JG-GVHXzj-TfyZ2FZ7MUEauN0ZCb3hzAIe9tUC2Pax-dNh_5RZWJc2HaRUaZOnTPDKWwXUYnE6z_NfLsxF3W7efFVuzzzt8knlkq-AI74LCIunOw"/>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded text-label-caps">Automation</span>
+</div>
+<h4 class="font-h3 text-h3 mb-2 group-hover:text-primary transition-colors">Automated CRM for Real Estate</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-section bg-surface" id="proses">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="font-h1 text-h1 text-on-surface mb-4">Proses Kerja Kami</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Bagaimana kami mewujudkan ide Anda menjadi produk digital yang sukses.</p>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+<!-- Step 1 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant shadow-sm text-center">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-6">1</div>
+<h4 class="font-h3 text-h3 mb-3">Discovery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Memahami visi, target audiens, dan kebutuhan teknis bisnis Anda.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant shadow-sm text-center">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-6">2</div>
+<h4 class="font-h3 text-h3 mb-3">Development</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pengembangan agile dengan update rutin untuk memastikan kualitas terbaik.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant shadow-sm text-center">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-6">3</div>
+<h4 class="font-h3 text-h3 mb-3">Launch</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deploy ke production dengan pengawasan ketat dan optimasi performa.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant shadow-sm text-center">
+<div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-6">4</div>
+<h4 class="font-h3 text-h3 mb-3">Support</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maintenance berkelanjutan dan iterasi fitur sesuai pertumbuhan bisnis.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section bg-white overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-6">
+<h2 class="font-h1 text-h1 text-on-surface text-center mb-16">Apa Kata Klien Kami</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-8">
+                        "Thorz Digital sangat profesional. Mereka berhasil mendigitalkan workflow bisnis kami yang tadinya berantakan menjadi otomatis dan efisien."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Budi Santoso" class="w-full h-full object-cover" data-alt="Professional headshot of a smiling Indonesian businessman in a light blue shirt with a blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf5NjS-kGMAURtrvwZyMeozM9K9tjtxb_IIdptTWrK7O-883uUqrLfhcDfDGITPwKnNlZErRckeTfa6TyiLT5_zfNJU4IPYO4I38zJwttO_9tIKi_N47h6vzbz3K0v-mT2I89GXKj6o9NJM8fcOleDCRspPTdAOC7DJApGqvqwF6PivAaYSQSN4uqPXpSqh_olQgIFIHlHwC2pMmRNibKAkQuQcWW8cC6piWI1uFwfRuH-nAFFWwxHWWm3OUEkAL4Gtipxk5R1me7R"/>
+</div>
+<div>
+<div class="font-bold text-on-surface">Budi Santoso</div>
+<div class="text-body-sm text-on-surface-variant">CEO, Retail Jaya</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-8">
+                        "Membangun SaaS dengan Thorz Digital adalah keputusan terbaik. Timnya paham teknis dan juga memberikan masukan dari sisi user experience."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Maya Putri" class="w-full h-full object-cover" data-alt="Professional headshot of a young Indonesian female entrepreneur with a kind expression and modern style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCCpnN4TTfE2Vld-D3VJCSGhbdPCW_BSbehGw02agRKWLConj9YZbFdyApNEyeXaHBZz-CPNWBxtUEkMRcCIzd9pj-HgUTZjd6mh6wx82DtQ6mYGoPAysu34ZfApJRrBPusGROSOFYs2aXDFFWidpGK-cULGUzQq-gMjx7w2DqkDkAHuPAEyGXRVS-IYgS09I2lBXzwPqbXVdEOROfyXGMh4JpjTrYl8i18lJmhXCENhM8n5ibIcVCMsIYFtqwyiytuwlqvtfLars"/>
+</div>
+<div>
+<div class="font-bold text-on-surface">Maya Putri</div>
+<div class="text-body-sm text-on-surface-variant">Founder, Bloom Tech</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-8">
+                        "Komunikasi lancar dan pengerjaan tepat waktu. Sangat membantu kami yang butuh web launch cepat untuk campaign produk baru."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Andi Wijaya" class="w-full h-full object-cover" data-alt="Close-up portrait of a tech-savvy professional man with glasses and a friendly, confident smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ2FWLktCYXMOIGUo-Wfq_CwpSWBjWwcNI-sLYBSLBwGDBdtbxcz1iE4PaO1jNQTT9g9U7i0FeZVzhD1qa18ID35g3IZIbJpUVYAhqkLdvBT1nntOMzbt5BZg7CWh0pP9rFxiWPL5msqExCFYhT6aOrwO6RB2D6dtIgSviAWQzhdMkV6CSBtnpoH7ITGHMWQ4i7IxuW40Sa8vSe9ZgTazBPfRwPIJSwe2hRcvF_TYR6HvFvnxy9cYy9a3Ntk7jcb2xRV_1mdLSeoW6"/>
+</div>
+<div>
+<div class="font-bold text-on-surface">Andi Wijaya</div>
+<div class="text-body-sm text-on-surface-variant">Marketing Manager, FashionID</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-section bg-surface-container-low" id="harga">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-h1 text-h1 text-on-surface mb-4">Pilihan Paket Harga</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Investasi cerdas untuk transformasi digital jangka panjang.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Starter -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant flex flex-col">
+<h4 class="font-h3 text-h3 mb-2">Starter</h4>
+<div class="text-body-sm text-on-surface-variant mb-6">Cocok untuk UMKM &amp; Landing Page</div>
+<div class="text-h1 font-bold mb-8 text-primary">IDR 5jt<span class="text-body-sm font-normal text-on-surface-variant">/mulai dari</span></div>
+<ul class="space-y-4 mb-12 flex-1">
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Responsive Web Design
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> SEO Optimization
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Integration Contact Form
+                        </li>
+</ul>
+<button class="w-full py-3 px-4 border border-outline-variant rounded-lg font-semibold hover:bg-surface transition-all">Pilih Paket</button>
+</div>
+<!-- Professional -->
+<div class="bg-white p-8 rounded-xl border-2 border-primary relative flex flex-col shadow-xl scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-label-caps">TERPOPULER</div>
+<h4 class="font-h3 text-h3 mb-2">Professional</h4>
+<div class="text-body-sm text-on-surface-variant mb-6">Untuk Startup &amp; Aplikasi Web</div>
+<div class="text-h1 font-bold mb-8 text-primary">IDR 15jt<span class="text-body-sm font-normal text-on-surface-variant">/mulai dari</span></div>
+<ul class="space-y-4 mb-12 flex-1">
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Everything in Starter
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Custom Admin Dashboard
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Database Integration
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> API Connectivity
+                        </li>
+</ul>
+<button class="w-full py-3 px-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary-container transition-all">Pilih Paket</button>
+</div>
+<!-- Enterprise -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant flex flex-col">
+<h4 class="font-h3 text-h3 mb-2">Enterprise</h4>
+<div class="text-body-sm text-on-surface-variant mb-6">Solusi Kustom Skala Besar</div>
+<div class="text-h1 font-bold mb-8 text-primary">Custom</div>
+<ul class="space-y-4 mb-12 flex-1">
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Dedicated Team
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Microservices Architecture
+                        </li>
+<li class="flex items-center gap-3 font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> 24/7 Priority Support
+                        </li>
+</ul>
+<button class="w-full py-3 px-4 border border-outline-variant rounded-lg font-semibold hover:bg-surface transition-all">Hubungi Kami</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="max-w-[1280px] mx-auto px-6 py-section">
+<div class="bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-display text-h1 text-white mb-6">Siap mulai project Anda?</h2>
+<p class="font-body-lg text-body-lg text-white/80 max-w-2xl mx-auto mb-10">
+                    Hubungi tim ahli kami sekarang untuk konsultasi gratis dan penawaran khusus.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-8 py-4 bg-white text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">forum</span> Chat via WhatsApp
+                    </button>
+<button class="px-8 py-4 bg-primary-container border border-white/30 text-white rounded-xl font-bold hover:bg-primary transition-all">
+                        Kirim Email
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="max-w-[1280px] mx-auto px-6 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="space-y-6">
+<div class="text-lg font-bold text-slate-900 dark:text-white">Thorz Digital</div>
+<p class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400">
+                        Penyedia solusi digital terdepan di Indonesia, membantu transformasi bisnis melalui teknologi inovatif.
+                    </p>
+<div class="flex items-center gap-4">
+<a class="text-slate-400 hover:text-indigo-600 transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-indigo-600 transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-slate-400 hover:text-indigo-600 transition-all" href="#"><span class="material-symbols-outlined">person_add</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Layanan</h5>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Web Development</a></li>
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Mobile Apps</a></li>
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Cloud SaaS</a></li>
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Automation</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Perusahaan</h5>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Tentang Kami</a></li>
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Portfolio</a></li>
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Karir</a></li>
+<li><a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Kantor</h5>
+<p class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 mb-6">
+                        Jl. Sudirman No. 123, SCBD Cluster,<br/>
+                        Jakarta Selatan, 12190<br/>
+                        Indonesia
+                    </p>
+<a class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:underline" href="#">
+<span class="material-symbols-outlined">chat</span> Hubungi Kami di WhatsApp
+                    </a>
+</div>
+</div>
+<div class="pt-12 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400">© 2024 Thorz Digital Indonesia. All rights reserved.</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Email</a>
+<a class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-all" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
